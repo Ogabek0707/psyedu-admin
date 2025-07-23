@@ -4,7 +4,7 @@ import { defineStore } from 'pinia'
 import authApi from '../api/auth/AuthApi'
 import Notification from '../plugins/Notification'
 import router from '@/router'
-import { markProgrammaticNavigation } from '@/utils/navigationGuard'
+// import { markProgrammaticNavigation } from '@/utils/navigationGuard'
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({
@@ -25,7 +25,7 @@ export const useAuthStore = defineStore('auth', {
             localStorage.setItem("refresh_token", res?.refresh_token);
             Notification({ text: "Successful logged in!!!" }, { type: "success" }, { time: "3500" }, { description: "" });
 
-            markProgrammaticNavigation()
+            // markProgrammaticNavigation()
             router.push({ name: "home" })
         }
       } catch (err) {

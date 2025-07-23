@@ -7,11 +7,11 @@
 
 <script setup>
 import router from '@/router';
-import { markProgrammaticNavigation } from '@/utils/navigationGuard';
+// import { markProgrammaticNavigation } from '@/utils/navigationGuard';
 
 
 const back = () => {
-    markProgrammaticNavigation()
+    // markProgrammaticNavigation()
     router.push({name: 'login'})
     console.log("salom dunyo");
 
