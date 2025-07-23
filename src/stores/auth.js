@@ -23,6 +23,7 @@ export const useAuthStore = defineStore('auth', {
             localStorage.setItem("access_token", res?.access_token);
             localStorage.setItem("refresh_token", res?.refresh_token);
             Notification({ text: "Successful logged in!!!" }, { type: "success" }, { time: "3500" }, { description: "" });
+
             router.push({ name: "home" })
         }
       } catch (err) {
