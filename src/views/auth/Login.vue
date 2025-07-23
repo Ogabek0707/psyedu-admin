@@ -65,7 +65,7 @@ const handleSubmit = async (e) => {
 
 <style lang="scss" scoped>
 .img {
-    background-image: url('../../assets/images/psych-2-D0xdJ1_L.jpg');
+    background-image: url('../../assets/images/psych-2-D0xdJ1_L.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
