@@ -24,7 +24,7 @@ export const useAuthStore = defineStore('auth', {
             localStorage.setItem("refresh_token", res?.refresh_token);
             Notification({ text: "Successful logged in!!!" }, { type: "success" }, { time: "3500" }, { description: "" });
 
-            router.push({ name: "home" })
+            router.push({ name: "statistics" })
         }
       } catch (err) {
         if(err.response.data.message == "user not found") {

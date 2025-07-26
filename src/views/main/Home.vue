@@ -1,21 +1,14 @@
 <template>
-    <div>
-        Home Page
-        <button @click="back">back</button>
-    </div>
+    <MainLayout>
+      <RouterView/>
+    </MainLayout>
 </template>
 
 <script setup>
-import router from '@/router';
-// import { markProgrammaticNavigation } from '@/utils/navigationGuard';
+import { RouterView } from 'vue-router'
+import MainLayout from '../../Layout/MainLayout.vue'
 
 
-const back = () => {
-    // markProgrammaticNavigation()
-    router.push({name: 'login'})
-    console.log("salom dunyo");
-
-}
 
 </script>
 

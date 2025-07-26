@@ -1,8 +1,8 @@
 import axiosClient from "../ApiClient";
 
-const CategoryApi = {
-      getCategory(payload){
-            const url = `categories?page=${payload.page}&limit=${payload.limit}`
+const StatisticsApi = {
+      getStatistics(){
+            const url = `statistics/regions`
             return axiosClient.get(url)
       },
       addCategory(payload){
@@ -18,4 +18,4 @@ const CategoryApi = {
             return axiosClient.put(url,payload)
       }
 }
-export default CategoryApi
+export default StatisticsApi
