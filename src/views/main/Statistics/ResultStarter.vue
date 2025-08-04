@@ -82,14 +82,14 @@ const regionOptions = computed(() => {
 })
 
 watch(selectedRegion, (newVal) => {
-    console.log(newVal);
   if (firstLoad.value && newVal?.value === 'all') {
-    
+    store.GetResultStarter(params)
   }
-  // endi boshqa tanlov bo‘lsa hech nima qilmaydi
-})
+  firstLoad.value = false // endi boshqa tanlov bo‘lsa hech nima qilmaydi
+}, { immediate: true })
 
 
+console.log(selectedRegion);
 
 const params2 = {
     page: 1,
