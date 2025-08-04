@@ -23,13 +23,16 @@ export const useAuthStore = defineStore('auth', {
             localStorage.setItem("access_token", res?.access_token);
             localStorage.setItem("refresh_token", res?.refresh_token);
             Notification({ text: "Successful logged in!!!" }, { type: "success" }, { time: "3500" }, { description: "" });
-
             router.push({ name: "statistics" })
         }
       } catch (err) {
+        console.log(err.message);
         if(err.response.data.message == "user not found") {
             Notification({ text: "User not found !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
+        }else {
+          Notification({ text: "Oops! Something went wrong. !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
         }
+
       }
     },
 

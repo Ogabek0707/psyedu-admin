@@ -4,7 +4,7 @@
       <button @click="isOpen = !isOpen"><svg-icon type="mdi" :path="mdiMenu" :class="isOpen ? 'hidden' : 'block'" class="w-[38px] h-[38px] text-gray-400 cursor-pointer"></svg-icon></button>
       <button @click="isOpen = !isOpen"><svg-icon type="mdi" :path="mdiArrowRight" :class="isOpen ? 'block' : 'hidden'" class="w-[38px] h-[38px] ml-[-30px] text-gray-400 cursor-pointer"></svg-icon></button>
       <div>
-        <h1 class="text-[#6a73fa] text-[20px] font-bold">{{ receivedValue }}</h1>
+        <!-- <h1 class="text-[#6a73fa] text-[20px] font-bold">{{ receivedValue }}</h1> -->
       </div>
     </div>
       <!-- <div class="w-[35px] h-[35px] rounded-[50%] bg-gray-400">
