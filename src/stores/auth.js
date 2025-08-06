@@ -32,6 +32,7 @@ export const useAuthStore = defineStore('auth', {
         }else {
           Notification({ text: "Oops! Something went wrong. !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
         }
+        Notification({ text: "User not found !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
 
       }
     },
