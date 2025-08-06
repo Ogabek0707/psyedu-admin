@@ -3,6 +3,7 @@ import axiosClient from "../ApiClient";
 const authApi = {
       Login(payload){
             const url = "auth/login"
+            console.log(payload);
             return axiosClient.post(url,payload)
       },
       SignUp(payload){
