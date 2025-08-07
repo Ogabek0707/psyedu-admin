@@ -26,13 +26,13 @@ export const useAuthStore = defineStore('auth', {
             router.push({ name: "statistics" })
         }
       } catch (err) {
-        console.log(err.message);
-        if(err.response.message == "user not found") {
+        console.log(err?.message);
+        if(err.response?.message == "user not found") {
             Notification({ text: "User not found !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
         }else {
           Notification({ text: "Oops! Something went wrong. !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
         }
-        Notification({ text: "User not found !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
+        // Notification({ text: "User not found !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
 
       }
     },

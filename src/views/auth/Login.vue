@@ -11,12 +11,12 @@
                     <div>
                         <label for="phone" class="text-gray-300 font-semibold">Phone Number</label>
                         <br>
-                        <InputMask unstyled autocomplete="off" type="text" mask="+998-99-999-99-99" name="phone" class="w-full bg-transparent border border-gray-200 p-[12px] text-gray-200 rounded-[4px]" placeholder="+998*********" v-model="form.phone" />
+                        <InputMask unstyled autocomplete="current-password" id="phone" type="text" mask="+998-99-999-99-99" name="phone" class="w-full bg-transparent border border-gray-200 p-[12px] text-gray-200 rounded-[4px]" placeholder="+998*********" v-model="form.phone" />
                     </div>
                     <div>
                         <label for="password" class="text-gray-300 font-semibold">Password</label>
                         <br>
-                        <Password unstyled autocomplete="off" type="password"  :feedback="false" :style="{ width: '100%' }" :inputStyle="{ width: '100%', padding: '12px', }" name="password" class="full-width text-gray-200 bg-transparent  border border-gray-200 rounded-[4px] focus:rounded-[10px]" placeholder="Password" v-model="form.password" />
+                        <Password unstyled autocomplete="current-password" id="password" type="password"  :feedback="false" :style="{ width: '100%' }" :inputStyle="{ width: '100%', padding: '12px', }" name="password" class="full-width text-gray-200 bg-transparent  border border-gray-200 rounded-[4px] focus:rounded-[10px]" placeholder="Password" v-model="form.password" />
                     </div>
                     <Button unstyled icon="pi pi-spin pi-circle"   :loading="isLoading" type="submit" class="w-full bg-gradient-to-r from-[#204d74] to-[rgb(55, 55, 55)] hover:from-[#104d74] transition-colors duration-800 cursor-pointer hover:to-[rgb(55, 55, 25)] text-white py-3 rounded-lg font-semibold transition shadow-lg" :label="btn_title" />
                 </Form>
